@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Lethukuthula Philani Studios</title>
+  <meta name="description" content="Get in touch with Lethukuthula Philani Studios to commission artwork, collaborate, or enquire about photography and creative services." />
+  <meta name="keywords" content="contact, commission artwork, photography, creative studio, South Africa" />
+  <meta name="author" content="Lethukuthula Philani Studios" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+  <nav class="top-nav">
+    <a href="index.html"><img src="Images/Logo.png" alt="Lethukuthula Philani Studios" class="nav-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <main>
+  <div class="page-header">
+    <p class="section-label">Our line is always open for you!</p>
+    <h1>Get In Touch</h1>
+  </div>
+
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Whether you'd like to commission a piece, collaborate, or simply enquire about available artworks — we'd love to hear from you.</p>
+
+        <div class="contact-detail">
+          <span>Instagram</span>
+          <a href="https://www.instagram.com/lethukuthula_philani_studios?igsh=Y3llNGc0bjZza3Qw" target="_blank">@lethukuthula_philani_studios</a>
+        </div>
+        <div class="contact-detail">
+          <span>Email</span>
+          <a href="mailto:studio@lps.co.za">studio@lps.co.za</a>
+        </div>
+        <div class="contact-detail">
+          <span>Commissions</span>
+          <p>Open for commissions — reach out via the form or DM on Instagram.</p>
+        </div>
+
+        <div style="margin-top: 40px;">
+          <p class="section-label">Response Time</p>
+          <p style="color: var(--grey); font-size: 0.85rem; margin-top: 8px;">We typically respond within 24–48 hours. For urgent enquiries, DM us directly on Instagram.</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <p class="section-label" style="margin-bottom: 20px;">Send a Message</p>
+        <form action="javascript:void(0)" onsubmit="validateForm()">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Enquiry Type</label>
+            <select id="subject" name="subject">
+              <option value="">Select an option</option>
+              <option value="commission">Commission Artwork</option>
+              <option value="purchase">Purchase Existing Work</option>
+              <option value="photography">Photography / Shoot</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="general">General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or enquiry..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-fill" style="width: 100%; border: none; cursor: pointer; font-family: 'Inter', sans-serif;">Send Message</button>
+          <div id="form-msg" style="margin-top: 16px; font-size: 0.9rem; display: none;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html"><img src="Images/Logo.png" alt="Lethukuthula Philani Studios" class="footer-logo" /></a>
+        <p>Lethukuthula Philani Studios — where every narrative is elegantly portrayed through authentic visual storytelling.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Photography</a></li>
+          <li><a href="services.html">Commissions</a></li>
+          <li><a href="services.html">Creative Direction</a></li>
+          <li><a href="services.html">Original Artworks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/lethukuthula_philani_studios?igsh=Y3llNGc0bjZza3Qw" target="_blank">Instagram</a></li>
+          <li><a href="contact.html">Commission Work</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lethukuthula Philani Studios. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/lethukuthula_philani_studios?igsh=Y3llNGc0bjZza3Qw" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const msg = document.getElementById('form-msg');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function showError(text) {
+        msg.textContent = text;
+        msg.style.color = '#b84a2a';
+        msg.style.display = 'block';
+      }
+
+      if (!name) { showError('Please enter your full name.'); return; }
+      if (!emailRegex.test(email)) { showError('Please enter a valid email address (e.g. name@example.com).'); return; }
+      if (!message) { showError('Please enter a message.'); return; }
+
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('subject').value = '';
+      document.getElementById('message').value = '';
+      msg.textContent = 'Message sent successfully!';
+      msg.style.color = '#2e7d32';
+      msg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
